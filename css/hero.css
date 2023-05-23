@@ -1,0 +1,203 @@
+:root{
+    --background-color: #181818;
+    --text-color: #E9E8E8;
+    --secondary-text-color: #B6EADA;
+}
+
+@font-face {
+    font-family: 'RaceSport';
+    src: url('../../fonts/RaceSport-BWPLV.ttf');
+}
+@font-face {
+    font-family: '5-Text';
+    src: url('../fonts/5TextUppercaseRegular-veKL.ttf');
+}
+@font-face {
+    font-family: 'modern-bohemian';
+    src: url('../fonts//ModernBohemian-lXdd.ttf');
+}
+
+#dummy{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.section{
+    max-height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.section::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('..//dall-e//DALL·E\ 2023-02-09\ 20.55.04\ -\ a\ futuristic\ neon\ crypto\ illestration.jpg');
+    background-position: 20% 150%;
+    filter: blur(5px);
+}
+
+.hero{
+    height: 100vh;
+    top:0; 
+    left:0;
+    display: grid;
+    place-items: left;
+    align-content: center;
+
+}
+
+
+.hero-text-heading{
+    font-family: RaceSport;
+    font-size: 3rem;
+    color: var(--text-color);
+    margin: 0;
+    
+    user-select: none; /* -- Prevent image highlighting -- */
+    
+} 
+
+.hero-text-paragraph{
+    /* font-family: 'ModernBohemian'; */
+    font-family: '5-Text';
+    color: var(--secondary-text-color);
+    font-size: 2.5rem;
+    margin: 0;
+    user-select: none; /* -- Prevent image highlighting -- */
+}
+
+
+.hidden{
+    opacity: 0;
+    filter:blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+
+
+.crypto-img{
+    width: 100px;
+    height:100px;
+    position: absolute;
+    opacity: 0;
+    filter:blur(15px);
+    transform: translateY(100%);
+    transition: all 1s ease-in-out;
+}
+
+  
+.img-one{
+    top: 15rem;
+    left: 3rem;
+
+}
+
+.img-two{
+    top: 32rem;
+    left: 17rem;
+}
+
+.show{
+    opacity: 1;
+    filter:blur(0px);
+    transform: translateX(0%);
+}
+
+.big-screen{
+    display: none;
+}
+@media screen and (min-width: 550px) {
+    .mobile{
+        display: none;
+    }
+    .big-screen{
+        display: block;
+    }
+
+    .section{
+
+        padding-left: 6rem;
+    }
+
+    .hero-text-heading{
+        font-size: 4rem;
+    }
+    .hero-text-paragraph{
+        font-size: 2rem;
+        font-family: 'modern-bohemian';
+        letter-spacing: 0.15rem;
+    }
+
+    .img-one{
+        top: 15rem;
+        left: 7rem;
+    
+    }
+    .img-two{
+        top: 35rem;
+        left: 60vw;
+    }
+
+    .section::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url('..//dall-e//DALL·E\ 2023-02-09\ 20.55.04\ -\ a\ futuristic\ neon\ crypto\ illestration.jpg');
+        filter: blur(10px);
+        background-position: 30% 70%;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* scale: 1.3; */
+    }
+}
+
+
+@media screen and (min-width: 1600px) {
+    .mobile{
+        display: none;
+    }
+    .big-screen{
+        display: block;
+    }
+    .section{
+        padding: 6rem;
+        padding-left: 10rem;
+    }
+    .hero-text-heading{
+        font-size: 5rem;
+    }
+    .hero-text-paragraph{
+        font-size: 2.5rem;
+        font-family: 'modern-bohemian';
+        letter-spacing: 0.15rem;
+    }
+
+    .img-one{
+        top: 38rem;
+        left: 56rem;
+    }
+    .img-two{
+        top: 16rem;
+        left: 90rem;
+    }
+    .section::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url('..//dall-e//DALL·E\ 2023-02-09\ 20.55.04\ -\ a\ futuristic\ neon\ crypto\ illestration.jpg');
+        filter: blur(10px);
+        background-position: 30% 70%;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        scale: 1.3;
+    }
+
+}

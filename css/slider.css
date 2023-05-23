@@ -1,0 +1,222 @@
+:root{
+    --background-color: #181818;
+    --text-color: #E9E8E8;
+    --slide-image-gap: 3rem;
+}
+
+@font-face {
+    font-family: 'Uncracked';
+    src: url('../fonts/UncrackedFreeTrial-X3WjK.otf');
+}
+
+@font-face {
+    font-family: 'DragonHunter';
+    src: url('../fonts/DragonHunter-9Ynxj.otf');
+}
+
+#ama-image-track{
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-image: linear-gradient(to right top, #141414, #241c2b, #3d1f3d, #5d1d47, #7f1447, #7f113f, #7e0f38, #7d0f30, #5e1228, #40121f, #230e14, #000000);
+}
+
+#ama-image-track-hr {
+    border: none;
+    height: 4px;
+    background-color: #333;
+    align-self: center;
+    width: 80%;
+    margin-top: -2%;
+}
+.ama-row{
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.ama-row{
+    height: 8rem;
+    width: 100%  ;
+}    
+
+
+.slider-image {
+    width: 42vw;
+    object-fit: scale-down;
+}
+
+
+
+.ama-detail{
+    color: var(--text-color);
+    font-family: 'Uncracked';
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.ama-detail >h1{
+    margin: 0;
+    letter-spacing: 0.37rem;
+    line-height: 2rem;
+}
+
+.ama-image-track-heading{
+    font-family: 'DragonHunter';
+    font-size: 1.5rem;
+    padding-inline: 3rem;
+    letter-spacing: 0.27rem;
+    align-items: center;
+    /* color: #D1FFF3; */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* for the animation */
+
+.fade-animation{
+
+    opacity: 0;
+    filter:blur(5px);
+    
+    transform: translateY(50%);
+    transition: all 1s ease-in-out;
+    
+}
+
+.fade-animation-show{
+    opacity: 1;
+    filter:blur(0px);
+    transform: translateY(-10%);
+}
+
+.left{
+    transform: translateX(100%);
+    opacity: 0;
+    filter:blur(5px);
+    transition: all 1s;
+}
+.right{
+    transform: translateX(-100%);
+    opacity: 0;
+    filter:blur(5px);
+    transition: all 1s;
+}
+
+.left-show{
+    transform: translateX(0%);
+    opacity: 1;
+    filter:blur(0px);
+    /* transition: all 1s; */
+}
+.right-show{
+    transform: translateX(0%);
+    opacity: 1;
+    filter:blur(0px);
+    /* transition: all 1s; */
+}
+
+.ama-row:nth-child(2){
+    transition-delay: 200ms;
+}
+.ama-row:nth-child(3){
+    transition-delay: 400ms;
+}
+.ama-row:nth-child(4){
+    transition-delay: 600ms;
+}
+.ama-row:nth-child(5){
+    transition-delay: 600ms;
+}
+
+
+@media screen and (min-width: 700px ) {
+    
+    #ama-image-track-hr{
+        margin-bottom:5rem ;
+    }
+    
+    .slider-image{
+        width: 40vh;
+    }
+    
+    .slider-image + .ama-detail{
+        margin-left: var(--slide-image-gap);
+        /* margin-right: 20rem; */
+    }
+    .ama-detail + .slider-image{
+        margin-left: var(--slide-image-gap);
+    }
+    .ama-row{
+        justify-content: center;
+    }
+
+    .ama-img-container{
+        display:flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+    }
+    .ama-row + .ama-row{
+        margin-top: 3rem;
+    }
+/* 
+    .ama-row-1, .ama-row-3{
+        transform: translateX(-10%);
+    }
+    .ama-row-2, .ama-row-4{
+        transform: translateX(10%);
+    } 
+*/
+
+    .ama-detail{
+        font-size: 1.2rem;
+    }
+
+
+    .left{
+        transform: translateX(100%);
+        opacity: 0;
+        filter:blur(5px);
+        transition: all 1s;
+    }
+    .right{
+        transform: translateX(-100%);
+        opacity: 0;
+        filter:blur(5px);
+        transition: all 1s;
+    }
+
+    .left-show{
+        transform: translateX(-10%);
+        opacity: 1;
+        filter:blur(0px);
+        /* transition: all 1s; */
+    }
+    .right-show{
+        transform: translateX(10%);
+        opacity: 1;
+        filter:blur(0px);
+        /* transition: all 1s; */
+    }
+
+    .ama-row:nth-child(2){
+        transition-delay: 200ms;
+    }
+    .ama-row:nth-child(3){
+        transition-delay: 400ms;
+    }
+    .ama-row:nth-child(4){
+        transition-delay: 600ms;
+    }
+    .ama-row:nth-child(5){
+        transition-delay: 600ms;
+    }
+
+}

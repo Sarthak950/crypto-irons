@@ -1,0 +1,77 @@
+.twitter-section{
+    /* background: var(--twitter-section-bg); */
+    background-image: linear-gradient(to right bottom, #141414, #241c2b, #3d1f3d, #5d1d47, #7f1447, #7f113f, #7e0f38, #7d0f30, #5e1228, #40121f, #230e14, #000000);
+
+    padding: 50px 1.2rem;
+    min-height: 100vh;
+    overflow: hidden;
+    /* padding-inline: 5rem; */
+    /* padding :5px; */
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.twiter-section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /* max-width: 45vw; */
+    width: 100%;
+    /* max-width: 50vw; */
+}
+.twitter-section-heading{
+    font-family: 'BSB';
+    color: var(--text-color);
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+.twitter-section-content{
+    height: 60vh;
+    width: 95%;
+    overflow: scroll;
+    border-radius: 10px;
+}
+
+.chart-container{
+    margin:30px;
+
+}
+.reach{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media screen and (min-width: 600px) {
+    .twitter-section{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        /* add space in between */
+        grid-gap: 3rem;
+        max-height: 60vh;
+    }
+    .reach{
+        margin-bottom: 2rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .twitter-section-content{
+        height:70vh; 
+        max-width: 48vw;
+    }
+}

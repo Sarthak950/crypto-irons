@@ -1,0 +1,123 @@
+:root{
+    --footer-color: #040303;
+    --text-color: #E9E8E8;
+    --secondary-text-color: #B6EADA;
+}
+
+.footer{
+    background-image: linear-gradient(to right top, #141414, #241c2b, #3d1f3d, #5d1d47, #7f1447, #7f113f, #7e0f38, #7d0f30, #5e1228, #40121f, #230e14, #000000);
+    max-width: 100vw;
+    overflow:hidden;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.footer-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    padding: 1rem;
+}
+
+.footer-header-img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.footer-header > h1{
+    font-family: 'RaceSport';
+    font-size: 1.27rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-color);
+    margin: 0;
+}
+.contact{
+    color: var(--text-color);
+    font-family: 'BSB';
+    font-size: 1.3rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    padding-left: 1rem;
+    letter-spacing: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons{
+    fill: var(--text-color);
+    height: 10vw;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.social-name{
+    font-family: 'BSB';
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--text-color);
+}
+.social-link-a{
+    
+    text-decoration: none;
+    transition: transform, background-color;
+    transition-duration: 400ms;
+    transition-timing-function: ease;
+}
+
+.social-link-a:hover{
+    transform: scale(1.1);
+}
+.social-link-a:active{
+    transform: scale(0.96);
+}
+
+@media screen and (min-width: 600px) {
+
+    .footer-header > h1{
+        font-size: 4.3rem;
+        letter-spacing: 0.2rem;
+    }
+    .footer-header-img{
+        width:  7rem;
+        height: 7rem;
+    }
+    .contact {
+        font-size: 2.3rem;
+        letter-spacing: 0.2rem;
+    }
+    .footer-links{
+        padding-inline: 10rem;
+    }
+    .social-name{
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+    .footer-icons{
+        height: 4rem;
+    }
+    
+}
